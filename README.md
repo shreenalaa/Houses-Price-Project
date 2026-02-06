@@ -1,161 +1,110 @@
-🏠 House Price Prediction Project
-📌 Project Overview
+🏠 House Price Prediction & Analysis
+📖 Project Overview
 
-This project focuses on predicting house prices using Linear Regression.
-It includes a full data science pipeline:
+This project focuses on analyzing and modeling house price data to understand the key factors that influence property values and to build predictive models for accurate house price estimation.
+It combines data preprocessing, exploratory data analysis (EDA), feature engineering, and machine learning techniques to deliver meaningful insights and reliable predictions.
 
-Data loading
+The goal is to transform raw housing data into a structured, clean, and informative dataset that can be used for real-world real estate analytics and intelligent pricing systems.
 
-Data cleaning
+📂 Dataset Description
+
+The dataset includes structured information about residential properties, such as:
+
+Property size and area
+
+Number of rooms and bedrooms
+
+Location-related features
+
+Construction and property characteristics
+
+Price values
+
+Additional housing attributes
+
+🧹 Data Preprocessing
+✔ Data Cleaning
 
 Handling missing values
 
-Outlier detection & treatment
+Removing duplicates
 
-Feature engineering
+Fixing inconsistent data types
 
-Data visualization (EDA)
+Removing irrelevant or redundant features
+
+✔ Feature Engineering
+
+Creating meaningful new features
 
 Encoding categorical variables
 
-Model training & evaluation
+Normalization and scaling
 
-The goal is to build a reliable regression model that can estimate house prices based on different property features.
+Outlier detection and handling
 
-📊 Dataset Description
+📊 Exploratory Data Analysis (EDA)
 
-The dataset contains real estate information such as:
+The project includes detailed visual and statistical analysis:
 
-price → House price (target variable)
+📈 Price distribution analysis
 
-bedrooms
+📦 Outlier detection using boxplots
 
-bathrooms
+🔗 Correlation analysis between features
 
-sqft_living
+🗺 Location-based price trends
 
-sqft_lot
+📉 Feature impact analysis on pricing
 
-floors
+🧮 Statistical summaries
 
-waterfront
+🤖 Machine Learning Pipeline
+Models Used
 
-view
+Linear Regression
 
-condition
+Decision Trees
 
-sqft_above
+Random Forest
 
-sqft_basement
+(Optional extensions: XGBoost, Gradient Boosting, Neural Networks)
 
-yr_built
+Training Process
 
-yr_renovated
+Data splitting (Train/Test)
 
-street
+Feature scaling
 
-city
+Model training
 
-statezip
+Hyperparameter tuning
 
-country
+Model evaluation
 
-date
+Evaluation Metrics
 
-🧹 Data Preprocessing
-✔ Handling Missing Values
+Mean Absolute Error (MAE)
 
-Dropped rows with null values.
+Mean Squared Error (MSE)
 
-Removed invalid zero values (e.g. price = 0, bedrooms = 0, bathrooms = 0).
+Root Mean Squared Error (RMSE)
 
-✔ Outlier Treatment
+R² Score
 
-Applied clipping to reduce extreme values:
+🎯 Project Objectives
 
-sqft_living → max = 6000
+Understand house price drivers
 
-sqft_basement → max = 2000
+Build reliable predictive models
 
-sqft_above → max = 5000
+Improve price estimation accuracy
 
-price → removed extreme high values
+Support data-driven real estate decisions
 
-bedrooms → clipped to max = 7
+Create a scalable pricing system framework
 
-bathrooms → normalized rare values and clipped to max = 4.25
-
-📈 Exploratory Data Analysis (EDA)
-
-Used visualizations to understand data patterns:
-
-Heatmaps for correlation
-
-Histograms for price distribution
-
-Scatter plots (price vs features)
-
-Bar plots for categorical relations
-
-Libraries used:
-
-matplotlib
-
-seaborn
-
-🧠 Feature Engineering
-Feature Selection
-
-Dropped weak or high-cardinality features:
-
-street
-
-country
-
-date
-
-yr_built
-
-yr_renovated
-
-condition
-
-sqft_above
-
-sqft_lot
-
-Encoding
-
-Applied One-Hot Encoding for categorical features:
-
-city
-
-statezip
-
-pd.get_dummies(data, columns=["statezip", "city"])
-
-🤖 Model Building
-Algorithm Used
-
-Linear Regression from scikit-learn
-
-from sklearn.linear_model import LinearRegression
-
-Training
-model = LinearRegression()
-x = data.drop(["price"], axis=1)
-y = data["price"]
-model.fit(x, y)
-
-Model Accuracy (R² Score)
-model.score(x, y)
-
-
-Final Accuracy:
-
-✅ 0.76 (76%)
-
-📦 Technologies Used
+🛠 Technologies Used
 
 Python
 
@@ -169,40 +118,23 @@ Seaborn
 
 Scikit-learn
 
-📁 Project Structure
-📦 House-Price-Prediction
- ┣ 📜 task.csv
- ┣ 📜 main.py / notebook.ipynb
- ┣ 📜 README.md
+🚀 Future Enhancements
 
-🎯 Objective
+Deep learning models for price prediction
 
-Build a clean, structured, and optimized regression model that can:
+Location intelligence integration (GIS data)
 
-Predict house prices
+Real-time pricing systems
 
-Handle real-world noisy data
+Web-based prediction app (Flask / FastAPI / Streamlit)
 
-Apply proper feature engineering
+AI-powered real estate recommendation system
 
-Follow data science best practices
+👩‍💻 Author
 
-🚀 Future Improvements
+Shereen Alaa
+Machine Learning Engineer
 
-Train/Test split
+GitHub: https://github.com/shreenalaa
 
-Cross-validation
-
-Try advanced models:
-
-Random Forest
-
-XGBoost
-
-Gradient Boosting
-
-Feature scaling
-
-Model comparison
-
-Deployment (Streamlit / Flask API)
+LinkedIn: https://www.linkedin.com/in/shreen-alaa/
